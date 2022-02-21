@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,3 +22,6 @@ Route::get('/about', function () {
 Route::get('/articles/{id}', function ($id) {
     echo "Anda berada di halaman artikel ke ".$id;
 });
+Route::get('/HomeController', [PageController::class,'HomeController']);
+Route::get('/AboutController', [PageController::class,'AboutController']);
+Route::get('/ArticleController/{id}', [PageController::class,'ArticleController']);
